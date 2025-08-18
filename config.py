@@ -14,6 +14,10 @@ def access_secret_version(project_id, secret_id, version_id="latest"):
 
 # 你 GCP 專案 ID
 PROJECT_ID = "gen-lang-client-0700041250"
+
+access_token = access_secret_version(PROJECT_ID, "LINE_CHANNEL_ACCESS_TOKEN")
+secret = access_secret_version(PROJECT_ID, "LINE_CHANNEL_SECRET")
+
 SERVICE_ACCOUNT_JSON_str = access_secret_version(PROJECT_ID, "SERVICE_ACCOUNT_JSON")
 SERVICE_ACCOUNT_JSON_dict = json.loads(SERVICE_ACCOUNT_JSON_str)
 # 直接建立憑證物件
@@ -23,4 +27,5 @@ SERVICE_ACCOUNT_JSON = service_account.Credentials.from_service_account_info(
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive"
     ]
+
 )

@@ -16,8 +16,49 @@
 
 ## 畫面
 <p align="center">
-  <img src="Demo01.jpg" alt="專案封面圖" width="200">
-  <img src="Demo02.jpg" alt="專案封面圖" width="200">
-  <img src="Demo03.jpg" alt="專案封面圖" width="200">
-  <img src="Demo04.jpg" alt="專案封面圖" width="200">
+  <img src="Demo01.jpg" alt="專案封面圖" width="225">
+  <img src="Demo02.jpg" alt="專案封面圖" width="225">
+  <img src="Demo03.jpg" alt="專案封面圖" width="225">
+  <img src="Demo04.jpg" alt="專案封面圖" width="225">
 </p>
+
+## 功能總覽
+>  首次加入好友 
+
+歡迎訊息 + 使用指南
+
+>  收到文字訊息
+
+使用指南
+ 
+>  點選主選單  - 分店查詢
+
+流程：選分店 -> 選時間 -> 結果
+內容：營業額、各商品銷售量
+>  點選主選單  - 各店營業額
+
+流程：選時間 -> 結果
+內容：各分店營業額、全部總營業額
+
+>  點選主選單  - 庫存查詢
+
+流程：選分店 -> 結果
+內容：該分店與總店的各商品即時庫存量  
+
+## 安裝
+```
+
+```
+
+## 專案技術
+- **line-bot-sdk** v3
+- **flask**
+- **gunicorn**
+- **google-cloud**
+
+## 第三方服務
+- LINE BOT
+- GOOGLE CLOUD 
+  - GoogleSheet API
+  - Google Secret Manager
+  - Cloud RUN

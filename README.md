@@ -54,20 +54,49 @@
 > richmenu_UR_function.py
 1. 庫存查詢
 
-
 ## 設定檔
+> config.py
 1. 設定今天日期  
    - (預設) 2024/9/1
 2. 從google secret manger匯入  
    - (Line) access_token
    - (Line) secret
    - (GooglesheetAPI) SERVICE_ACCOUNT_JSON
+## 雲端佈屬
+```
+Step1:啟用API服務
+```
+- GooglesheetAPI
+- Secret Manager API
+- Cloud Run Admin API
+```
+Step2:安全性 -> Secret Manager
+```
+新增密碼由google託管
+- LINE_CHANNEL_ACCESS_TOKEN
+- LINE_CHANNEL_SECRET
+- SERVICE_ACCOUNT_JSON
+```
+Step3:Cloud run -> 服務
+```
+**先將此專案下載放進自己的github**  
+**Cloud Run建立服務並完成以下設定即可建立**
+- 選擇連結存放區 ->設定Cloud Build->連接自己的專案
+- 填寫設定 ->服務名稱、地區
+- 驗證 ->選允許公開存取
+     
+```
+Step4:Cloud run -> 服務 -> LINE Developers
+```
+在該專案找到『服務網址』複製  
+貼上**Webhook URL**並按 [vertify] 驗證 success則成功  
+(LINE Developers ->已建立的LINEBOT ->Messaging API-> Webhook settings)
 
 ## 專案技術
-- **line-bot-sdk** 
-- **flask**
-- **gunicorn**
-- **google-cloud**
+- line-bot-sdk
+- flask
+- gunicorn
+- google-cloud
 
 ## 第三方服務
 - LINE BOT

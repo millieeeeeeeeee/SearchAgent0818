@@ -35,19 +35,24 @@
 ## 工具函數模組
 > user_message.py
 
-歡迎訊息、使用指南
+1. 歡迎訊息
+2. 使用指南
 > sheetdata.py
 
-將三張表合成同個dataframe，方便取用
+1. 資料處理轉為dataframe，方便取用
+2. 合併每日營業額、每日商品銷售量的資料表
 > setting_datetime.py
 
+1. 定義時間範圍 (周、月)
 > setting_richmenu.py
-
+1. 設定主選單(圖片、功能數量、回傳參數)
+2. 設定各功能的流程參數
 > richmenu_UL_function.py
-
+1. 分店查詢
 > richmenu_UM_function.py
-
+1. 各店營業額
 > richmenu_UR_function.py
+1. 庫存查詢
 
 
 ## 設定檔
@@ -59,7 +64,7 @@
    - (GooglesheetAPI) SERVICE_ACCOUNT_JSON
 
 ## 專案技術
-- **line-bot-sdk** v3
+- **line-bot-sdk** 
 - **flask**
 - **gunicorn**
 - **google-cloud**

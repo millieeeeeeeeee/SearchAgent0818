@@ -17,8 +17,6 @@ from utils.richmenu_UR_function import *
 import config
 access_token = config.access_token
 secret = config.secret
-#access_token = '6Ety0+qdlm9GdM/VlFX5K+lnQu5IMYBWeRba2FUpmzB0TwQIfoNYA6tn/m2dnyNR/1sIiO8ek4gmrJXm4J5P6Th3Fhpz6cdAtHQwdhsk/ibMiApjxanoKghogEmdwTo7sl6fjm3FRYkJAxKpL1PKqgdB04t89/1O/w1cDnyilFU='
-#secret = 'b4d6920e3dcfd210051f1b413fdf894c'
 
 
 configuration = Configuration(access_token=access_token)
@@ -175,3 +173,4 @@ def search_inventory(event, data_dict):
 
     else:
         return TextMessage(text=f"⚠️ UR無法辨識步驟：{step}")
+
